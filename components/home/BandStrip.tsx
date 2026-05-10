@@ -11,7 +11,7 @@ export function BandStrip() {
   ] as const;
 
   return (
-    <div className="border-y border-sw-ink/10 bg-sw-ink/[0.04] py-3">
+    <div className="border-y border-sw-ink/10 bg-sw-ink/[0.04] py-3 shadow-[inset_0_1px_0_rgb(255_255_255_/_0.42)]">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-5 gap-y-2 px-5 text-[10px] font-semibold uppercase tracking-[0.32em] text-sw-ink/55 sm:px-8 lg:px-10">
         {bits.map((b, i) => (
           <span key={b} className="flex items-center gap-5">

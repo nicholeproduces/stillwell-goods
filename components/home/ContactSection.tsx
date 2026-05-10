@@ -1,7 +1,6 @@
 import { SITE } from "@/lib/site";
 
-const linkClass =
-  "border-b border-sw-brass/50 pb-px transition hover:border-sw-brass hover:text-sw-cream";
+const linkClass = "link-shine-dark text-sw-paper/92";
 
 export function ContactSection() {
   return (
@@ -9,10 +8,10 @@ export function ContactSection() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-24 lg:px-10">
         <div className="grid gap-14 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-sw-brass">
+            <p className="section-eyebrow text-[10px] font-semibold uppercase text-sw-brass">
               Contact
             </p>
-            <h2 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+            <h2 className="mt-4 text-3xl font-semibold leading-[1.08] tracking-[-0.02em] sm:text-4xl">
               Say hello before your idea gets too polished.
             </h2>
             <p className="mt-5 max-w-prose text-sm leading-relaxed text-sw-paper/70 sm:text-base">

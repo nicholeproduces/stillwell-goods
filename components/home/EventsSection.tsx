@@ -11,16 +11,16 @@ export function EventsSection() {
   return (
     <section
       id="events"
-      className="relative overflow-hidden bg-sw-green text-sw-paper"
+      className="sw-grain-dark relative overflow-hidden bg-sw-green text-sw-paper"
     >
       <div className="pointer-events-none absolute -left-40 top-1/2 h-[120%] w-[55%] -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(20,20,20,0.35),transparent_70%)]" />
       <div className="relative mx-auto max-w-7xl px-5 py-20 sm:px-8 sm:py-28 lg:px-10">
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-7">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-sw-brass">
+            <p className="section-eyebrow text-[10px] font-semibold uppercase text-sw-brass">
               Events / Pop-Ups
             </p>
-            <h2 className="mt-4 max-w-2xl text-pretty text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
+            <h2 className="mt-4 max-w-2xl text-pretty text-3xl font-semibold leading-[1.08] tracking-[-0.02em] sm:text-4xl lg:text-[2.35rem] lg:leading-[1.12]">
               The calendar stays loose on purpose—room for last-minute magic.
             </h2>
             <p className="mt-6 max-w-prose text-pretty text-sm leading-relaxed text-sw-paper/80 sm:text-base">

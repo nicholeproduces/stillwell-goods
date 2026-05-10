@@ -19,16 +19,16 @@ export function ShopSection() {
   return (
     <section
       id="shop"
-      className="border-b border-sw-ink/10 bg-sw-cream py-20 sm:py-28"
+      className="sw-grain border-b border-sw-ink/10 bg-sw-cream py-20 sm:py-28"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <Reveal>
           <div className="grid gap-12 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-sw-green">
+              <p className="section-eyebrow text-[10px] font-semibold uppercase text-sw-green">
                 Shop / Source
               </p>
-              <h2 className="mt-4 max-w-md text-pretty text-3xl font-semibold leading-tight tracking-tight text-sw-ink sm:text-4xl">
+              <h2 className="mt-4 max-w-md text-pretty text-3xl font-semibold leading-[1.08] tracking-[-0.02em] text-sw-ink sm:text-4xl">
                 Furnish the set. Fill the room. Feed the idea.
               </h2>
               <p className="mt-6 max-w-prose text-pretty text-sm leading-relaxed text-sw-ink/70 sm:text-base">
@@ -39,7 +39,7 @@ export function ShopSection() {
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:col-span-7">
-              <div className="shop-card sm:col-span-2 group relative overflow-hidden rounded-sm border border-sw-ink/10 bg-sw-paper p-8 shadow-sm transition duration-500 hover:-translate-y-1 hover:shadow-lg">
+              <div className="shop-card sm:col-span-2 group relative overflow-hidden rounded-sm border border-sw-ink/10 bg-sw-paper p-8 shadow-[0_20px_44px_-28px_rgba(20,20,20,0.18)] ring-1 ring-white/40 transition duration-500 hover:-translate-y-[3px] hover:shadow-[0_28px_56px_-26px_rgba(20,20,20,0.26)]">
                 <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(184,154,98,0.12),transparent_55%)] opacity-0 transition duration-500 group-hover:opacity-100" />
                 <p className="relative max-w-lg text-lg font-medium leading-snug text-sw-ink">
                   A working retail floor: touch, measure, listen to a record,
@@ -62,7 +62,7 @@ export function ShopSection() {
               {pillars.map((p, i) => (
                 <article
                   key={p.title}
-                  className={`shop-card group flex flex-col justify-between rounded-sm border border-sw-ink/10 bg-sw-paper/90 p-6 transition duration-500 hover:-translate-y-1 hover:border-sw-green/25 hover:shadow-md sm:p-8 ${
+                  className={`shop-card group flex flex-col justify-between rounded-sm border border-sw-ink/10 bg-sw-paper/90 p-6 shadow-[0_14px_36px_-22px_rgba(20,20,20,0.14)] ring-1 ring-white/35 transition duration-500 hover:-translate-y-[3px] hover:border-sw-green/28 hover:shadow-[0_22px_48px_-24px_rgba(20,20,20,0.22)] sm:p-8 ${
                     i === 2 ? "sm:col-span-2 sm:mx-auto sm:max-w-3xl lg:max-w-none" : ""
                   }`}
                 >

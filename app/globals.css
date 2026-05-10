@@ -48,13 +48,169 @@ body {
   color: var(--sw-ink);
 }
 
+/**
+ * Light sections: paper-like grain (multiply reads warm on cream/paper).
+ */
+.sw-grain {
+  position: relative;
+}
+
+.sw-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.042;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+.sw-grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * Dark green sections: softer grain so type stays crisp.
+ */
+.sw-grain-dark {
+  position: relative;
+}
+
+.sw-grain-dark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.055;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.78' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+}
+
+.sw-grain-dark > * {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * Editorial photo frame: hairline border, specular top edge, depth shadow.
+ */
+.photo-frame {
+  position: relative;
+  border-radius: 2px;
+  box-shadow:
+    0 0 0 1px rgb(20 20 20 / 0.07),
+    0 28px 56px -26px rgb(20 20 20 / 0.48),
+    0 12px 28px -18px rgb(20 20 20 / 0.22);
+}
+
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.14);
+  mix-blend-mode: soft-light;
+}
+
+.photo-frame--lift {
+  transition:
+    box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.photo-frame--lift:hover {
+  box-shadow:
+    0 0 0 1px rgb(20 20 20 / 0.09),
+    0 36px 72px -30px rgb(20 20 20 / 0.52),
+    0 16px 36px -20px rgb(20 20 20 / 0.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-frame--lift {
+    transition: none;
+  }
+}
+
+.section-eyebrow {
+  letter-spacing: 0.38em;
+}
+
+.nav-link-shine {
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  background-image: linear-gradient(
+    to right,
+    var(--sw-brass),
+    color-mix(in oklab, var(--sw-brass) 70%, var(--sw-brown))
+  );
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition:
+    color 0.3s ease,
+    background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link-shine:hover {
+  background-size: 100% 1px;
+  color: var(--sw-ink);
+}
+
+.link-shine-dark {
+  display: inline-block;
+  padding-bottom: 0.15rem;
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--sw-brass) 92%, white),
+    color-mix(in oklab, var(--sw-cream) 55%, var(--sw-brass))
+  );
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition:
+    color 0.3s ease,
+    background-size 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.link-shine-dark:hover {
+  background-size: 100% 1px;
+  color: color-mix(in oklab, var(--sw-cream) 96%, white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link-shine,
+  .link-shine-dark {
+    background-size: 100% 1px;
+    transition: color 0.2s ease;
+  }
+}
+
+.divider-brass {
+  height: 1px;
+  max-width: 14rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--sw-brass) 85%, var(--sw-brown)) 0%,
+    color-mix(in oklab, var(--sw-brown) 35%, transparent) 52%,
+    transparent 100%
+  );
+  box-shadow: 0 1px 0 rgb(255 255 255 / 0.35);
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
   border-bottom: 1px solid rgb(20 20 20 / 0.08);
   background: color-mix(in oklab, var(--sw-paper) 88%, transparent);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px) saturate(1.08);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.55),
+    0 10px 36px -28px rgb(20 20 20 / 0.35);
 }
 
 .reveal {

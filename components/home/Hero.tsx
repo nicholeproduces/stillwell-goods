@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden border-b border-sw-ink/10 bg-sw-paper"
+      className="sw-grain relative overflow-hidden border-b border-sw-ink/10 bg-sw-paper"
     >
       <div className="pointer-events-none absolute -right-24 top-12 h-[min(72vw,520px)] w-[min(72vw,520px)] rounded-full bg-sw-green/12 blur-3xl" />
       <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-sw-brown/10 blur-3xl" />
@@ -25,10 +25,10 @@ export function Hero() {
             />
           </div>
           <div className="max-w-xl space-y-5">
-            <p className="text-pretty font-medium leading-snug text-sw-ink sm:text-lg lg:text-xl">
+            <p className="text-pretty font-medium leading-snug tracking-[-0.02em] text-sw-ink sm:text-lg lg:text-xl">
               {SITE.tagline}
             </p>
-            <div className="h-px max-w-xs bg-gradient-to-r from-sw-brass via-sw-brown/40 to-transparent" />
+            <div className="divider-brass" aria-hidden />
             <p className="max-w-prose text-pretty text-sm leading-relaxed text-sw-ink/75 sm:text-base">
               Stillwell Goods is a curated retail and community space for
               secondhand furniture, art, studio props, pop-ups, private events,
@@ -43,7 +43,7 @@ export function Hero() {
             style={{ clipPath: "polygon(8% 0, 100% 0, 100% 92%, 0 100%, 0 12%)" }}
           >
             <div className="absolute -right-6 -top-6 -z-10 h-[78%] w-[88%] rounded-sm bg-sw-green shadow-[0_24px_60px_-20px_rgba(20,20,20,0.45)]" />
-            <div className="relative h-full w-full overflow-hidden bg-sw-ink/5">
+            <div className="photo-frame photo-frame--lift relative h-full w-full overflow-hidden bg-sw-ink/5">
               <FallbackImage
                 candidates={SISTERS_SRC_CANDIDATES}
                 alt="Photography from Stillwell Goods"
