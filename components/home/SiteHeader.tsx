@@ -11,7 +11,7 @@ const nav = [
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-5 pb-4 pt-5 sm:px-8 lg:px-10">
+      <div className="mx-auto flex max-w-7xl items-end justify-between gap-6 px-5 pb-3 pt-3 sm:px-8 sm:pb-4 sm:pt-5 lg:px-10">
         <Link
           href="#top"
           className="group shrink-0 font-semibold tracking-[0.2em] text-sw-ink transition-colors hover:text-sw-green"
