@@ -10,8 +10,8 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-24 top-12 h-[min(72vw,520px)] w-[min(72vw,520px)] rounded-full bg-sw-green/12 blur-3xl" />
       <div className="pointer-events-none absolute -left-32 bottom-0 h-80 w-80 rounded-full bg-sw-brown/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-16 pt-10 sm:px-8 sm:pb-20 sm:pt-14 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-24 lg:pt-16">
-        <div className="flex flex-col justify-end gap-8 lg:col-span-6 lg:row-span-2">
+      <div className="relative mx-auto grid max-w-7xl gap-6 px-5 pb-14 pt-5 sm:gap-10 sm:px-8 sm:pb-20 sm:pt-14 lg:grid-cols-12 lg:gap-6 lg:px-10 lg:pb-24 lg:pt-16">
+        <div className="order-2 flex flex-col justify-start gap-6 sm:gap-8 lg:order-1 lg:col-span-6 lg:row-span-2 lg:justify-end lg:gap-8">
           <div className="hero-logo-wrap group relative max-w-xl">
             <div className="absolute -inset-3 -z-10 rounded-sm bg-gradient-to-br from-sw-cream via-transparent to-sw-green/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             <FallbackImage
@@ -20,7 +20,7 @@ export function Hero() {
               width={560}
               height={180}
               sizes="(max-width: 1024px) 90vw, 480px"
-              className="h-auto w-full object-contain object-left"
+              className="h-auto max-h-[7.5rem] w-full object-contain object-left sm:max-h-none"
               priority
             />
           </div>
@@ -37,9 +37,9 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative lg:col-span-6 lg:col-start-7 lg:mt-8">
+        <div className="relative order-1 lg:order-2 lg:col-span-6 lg:col-start-7 lg:mt-8">
           <div
-            className="hero-photo-ring relative aspect-[4/5] w-full max-lg:mx-auto max-lg:max-w-md lg:max-w-none lg:translate-x-4 lg:translate-y-2"
+            className="hero-photo-ring relative aspect-[4/5] w-full max-lg:mx-auto max-lg:max-w-none lg:max-w-none lg:translate-x-4 lg:translate-y-2"
             style={{ clipPath: "polygon(8% 0, 100% 0, 100% 92%, 0 100%, 0 12%)" }}
           >
             <div className="absolute -right-6 -top-6 -z-10 h-[78%] w-[88%] rounded-sm bg-sw-green shadow-[0_24px_60px_-20px_rgba(20,20,20,0.45)]" />
