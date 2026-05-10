@@ -36,6 +36,10 @@ yarn-error.log*
 # vercel
 .vercel
 
+# Local asset drops at repo root (canonical files live in public/assets/)
+/Stillwell_sisters.jpg
+/still_well_logo.jpg
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
